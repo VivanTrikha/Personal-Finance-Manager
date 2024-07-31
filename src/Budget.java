@@ -1,5 +1,5 @@
 public class Budget {
-    private double monthlyBudget;
+    private final double monthlyBudget;
     private double totalSpent;
 
     public Budget(double monthlyBudget) {
@@ -11,20 +11,12 @@ public class Budget {
         return monthlyBudget;
     }
 
-    public void setMonthlyBudget(double monthlyBudget) {
-        this.monthlyBudget = monthlyBudget;
-    }
-
     public double getTotalSpent() {
         return totalSpent;
     }
 
     public void addExpense(double amount) {
         this.totalSpent += amount;
-    }
-
-    public void resetTotalSpent() {
-        this.totalSpent = 0;
     }
 
     public boolean isOverBudget() {
